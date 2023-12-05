@@ -86,40 +86,44 @@ in this case 50 : 98 and all numbers inclusive of upper bound.
 for line 2 : range is 50 : 97  and 50 maps to 52. given a seed value of 79 it will not fall in the first interval
 but will fall in the second interval therefore 79 maps to 81
 """
-value =2043754183 
-value1 = 4501055
+
+"""
+I will attempt this tomorrow. after looking at the wizards od reddit I am going to gather all the endpoints and 
+go up the maps to have all the potential seeds and then intersect those seeds with actual seed ranges.
+"""
+
 start_time = time.time()
-for i in range(value, value + value1):
+# for i in range():
 
-    change = i
+#     change = i
 
-    #print(change , " is now")
-    for Almanac in mappings:
-        possiblevalues = []
-        notinInterval = True
-        for j , x in Almanac.items():
+#     #print(change , " is now")
+#     for Almanac in mappings:
+#         possiblevalues = []
+#         notinInterval = True
+#         for j , x in Almanac.items():
             
-            if change >= x[0][0] and change <= x[0][1]:
-                notinInterval= False
-                val = change - x[0][0] +x[1]
-                possiblevalues.append(val)
+#             if change >= x[0][0] and change <= x[0][1]:
+#                 notinInterval= False
+#                 val = change - x[0][0] +x[1]
+#                 possiblevalues.append(val)
         
-        #if i == 1:
+#         #if i == 1:
             
-        if not possiblevalues:
-            possiblevalues.append(change)
-        #print(possiblevalues,Almanac)
+#         if not possiblevalues:
+#             possiblevalues.append(change)
+#         #print(possiblevalues,Almanac)
             
-        change = min(possiblevalues)
-    locationvalues.append(change)
-end_time = time.time()
+#         change = min(possiblevalues)
+#     locationvalues.append(change)
+# end_time = time.time()
 
-# Calculate the elapsed time
-elapsed_time = end_time - start_time
+# # Calculate the elapsed time
+# elapsed_time = end_time - start_time
 
-# Print the result
-print(f"Elapsed time: {elapsed_time} seconds")
+# # Print the result
+# print(f"Elapsed time: {elapsed_time} seconds")
 
-#print(locationvalues)
+# #print(locationvalues)
 
-print(min(locationvalues))
+# print(min(locationvalues))
